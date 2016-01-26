@@ -19,7 +19,7 @@
     {text}                    detailed text
     -->
     <tab name="text" x="2%" y="11%" width="94%" height="79%" layer="2" scrollheight="{areaheight}/4">
-        <drawtextbox x="0" y="0" width="100%" font="{light}" fontsize="5%" color="{clrWhite}" text="{text}" />
+        <drawtextbox x="0" y="0" width="100%" font="{vdrOsd}" fontsize="5%" color="{clrWhite}" text="{text}" />
     </tab>
 
 </menudetailedtext>

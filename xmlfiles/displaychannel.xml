@@ -96,20 +96,17 @@
     {remaining}                        Remaining time of current Schedule in seconds
     -->
     <progressbar>
+        <area background="true" x="17%" y="80%" width="81%" height="2%" layer="2">
+            <drawellipse x="0" y="0" width="{areaheight}" height="{areaheight}" color="{clrBlack}" quadrant="0" />
+            <drawellipse x="{areawidth}-{areaheight}" y="0" width="{areaheight}" height="{areaheight}" color="{clrBlack}" quadrant="0" />
+            <drawrectangle x="{areaheight}/2" y="0" width="{areawidth} - {areaheight}" height="{areaheight}" color="{clrBlack}" />
+        </area>
         <area x="17%" y="80%" width="81%" height="2%" layer="2">
             <drawellipse x="1" y="1" width="{areaheight}-2" height="{areaheight}-2" color="{clrProgressbar}" quadrant="0" />
             <drawellipse x="1 + {elapsed}/{duration}*{areawidth} - {elapsed}/{duration}*{areaheight}" y="1" width="{areaheight}-2" height="{areaheight}-2" color="{clrProgressbar}" quadrant="0" />
             <drawrectangle x="{areaheight}/2" y="1" width="{elapsed}/{duration}*{areawidth} - {elapsed}/{duration}*{areaheight}" height="{areaheight}-2" color="{clrProgressbar}" />
         </area>
     </progressbar>
-
-    <progressbarback>
-        <area x="17%" y="80%" width="81%" height="2%" layer="2">
-            <drawellipse x="0" y="0" width="{areaheight}" height="{areaheight}" color="{clrBlack}" quadrant="0" />
-            <drawellipse x="{areawidth}-{areaheight}" y="0" width="{areaheight}" height="{areaheight}" color="{clrBlack}" quadrant="0" />
-            <drawrectangle x="{areaheight}/2" y="0" width="{areawidth} - {areaheight}" height="{areaheight}" color="{clrBlack}" />
-        </area>
-    </progressbarback>
     <!-- Available Variables statusinfo:
     {isRadio}                          true if channel is a radio channel
     {hasVT}                            true if channel has video text   
@@ -174,19 +171,15 @@
     {signalquality}                     SNR value of currently displayed channel
     -->
     <signalquality>
+        <area background="true" x="17%" y="95%" width="15%" height="4%" layer="2">
+            <drawimage imagetype="skinpart" path="signal" x="0" y="0" width="100%" height="45%"/>
+            <drawimage imagetype="skinpart" path="signal" x="0" y="50%" width="100%" height="45%"/>
+        </area>
         <area x="17%" y="95%" width="15%" height="4%" layer="3">
             <drawrectangle x="{areawidth}*{signalstrength}/100" y="0" width="{areawidth} - {areawidth}*{signalstrength}/100" height="45%" color="{clrTransBlack}" />
             <drawrectangle x="{areawidth}*{signalquality}/100" y="50%" width="{areawidth} - {areawidth}*{signalquality}/100" height="45%" color="{clrTransBlack}" />
         </area>
     </signalquality>
-
-    <!-- background of signalmeter, will only be drawn if signalquality was deleted -->
-    <signalqualityback>
-        <area x="17%" y="95%" width="15%" height="4%" layer="2">
-            <drawimage imagetype="skinpart" path="signal" x="0" y="0" width="100%" height="45%"/>
-            <drawimage imagetype="skinpart" path="signal" x="0" y="50%" width="100%" height="45%"/>
-        </area>
-    </signalqualityback>
 
     <!-- Available Variables scrapercontent:
     {mediapath}                         Full Path of Poster or Banner to use in image path attribute
@@ -218,7 +211,7 @@
             <drawimage condition="{error}" imagetype="skinpart" path="messageError" x="0" y="0" width="100%" height="100%" />
         </area>
         <area x="5%" y="88%" width="90%" height="10%" layer="7">
-            <drawtext align="center" valign="center" font="{light}" fontsize="50%" color="{clrWhite}" text="{text}" />
+            <drawtext align="center" valign="center" font="{vdrOsd}" fontsize="50%" color="{clrWhite}" text="{text}" />
         </area>
     </message>
 

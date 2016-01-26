@@ -372,7 +372,7 @@
         </area>
         <area layer="2">
             <drawimage condition="{channellogoexists}" imagetype="channellogo" path="{channelid}" align="center" valign="center" width="80%" height="80%" />
-            <drawtext condition="not{channellogoexists}" align="center" valign="center" width="98%" font="{light}" fontsize="40%" color="{clrWhite}" text="{name}" />
+            <drawtext condition="not{channellogoexists}" align="center" valign="center" width="98%" font="{vdrOsd}" fontsize="40%" color="{clrWhite}" text="{name}" />
         </area>
     </grid>
 

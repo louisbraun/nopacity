@@ -224,7 +224,7 @@
                 <drawtextbox condition="not{hasposter}" x="10" y="{posy(poster)}" width="99%" height="{areaheight} - {posy(poster)}" font="{vdrOsd}" fontsize="{areaheight}/18" color="{clrWhite}" text="{description}" />
             </area>
             <areascroll condition="{whatsonnow}||{whatsonnext}" mode="forthandback" orientation="vertical" delay="1000" scrollspeed="medium" x="32%" y="78%" width="67%" height="20%" layer="2">
-                <drawtext x="10" y="0" font="{semibold}" fontsize="20%" color="{clrWhite}" text="{tr(nextschedules)}:" />
+                <drawtext x="10" y="0" font="{vdrOsd}" fontsize="20%" color="{clrWhite}" text="{tr(nextschedules)}:" />
                 <loop name="schedule" x="0" y="{areaheight}/4 + 5" orientation="vertical">
                     <drawtext x="10" font="{vdrOsd}" width="{areawidth}-20" fontsize="20%" color="{clrWhite}" text="{schedule[start]} {schedule[title]}" />
                 </loop>
